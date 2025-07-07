@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Nature Scene Animation</title>
+<style>
+body {
+    /* Set background to cover the full screen and be fixed */
+    background-repeat: no-repeat;
+    background-size: 100% 100%; /* Changed from 50% 50% to cover entire screen */
+    background-attachment: fixed;
+    margin: 0; /* Remove default body margin */
+    overflow: hidden; /* Prevent scrollbars if content goes outside */
+}
+
+/* Style for the Sun (fixed at the top) */
+.sun {
+    position: absolute; /* Position relative to the body */
+    top: 20px; /* Distance from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for true centering */
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+/* Style for the Flowers (fixed at the bottom) */
+.flowers-group { /* Changed class name to avoid conflict with singular "flower" */
+    position: absolute; /* Position relative to the body */
+    bottom: 0; /* At the very bottom */
+    width: 100%; /* Cover the full width */
+    text-align: center; /* Center the flower images */
+    z-index: 5; /* Below the sun, above the background */
+}
+
+/* Style for the Marquee (birds) */
+.birds-marquee {
+    position: absolute; /* Position relative to the body */
+    top: 50%; /* Adjust this to move birds higher/lower */
+    width: 500%; /* Full width for scrolling */
+    transform: translateY(-50%); /* Vertically center in its row */
+    overflow: hidden; /* Hide content outside the marquee area */
+}
+</style>
+</head>
+<body background="C:\Users\HP\OneDrive\Pictures\beautiful-landscape-in-spring-season-free-video.jpg">
+
+    <img src="C:\Users\HP\OneDrive\Pictures\source.gif" class="sun" width="300px" alt="Sun">
+
+    <marquee class="birds-marquee" direction="right" scrollamount="10" scrolldelay="100">
+        <img src="C:\Users\HP\OneDrive\Pictures\bird.png" width="500px" alt="Bird">&emsp;&emsp;
+        </marquee>
+
+    
+</body>
+</html>
